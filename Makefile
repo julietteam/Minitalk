@@ -6,7 +6,7 @@
 #    By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/08 12:05:06 by julietteand       #+#    #+#              #
-#    Updated: 2023/06/19 14:05:08 by juandrie         ###   ########.fr        #
+#    Updated: 2023/06/19 14:20:59 by juandrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,18 @@ LIBFT_DIR = Libft
 
 HEADER = -I$(LIBFT_DIR)
 
-$(NAME): all
+DEF_COLOR	=	\033[0;39m
+ORANGE		=	\033[0;33m
+GRAY		=	\033[0;90m
+RED			=	\033[0;91m
+GREEN		=	\033[1;92m
+YELLOW		=	\033[1;93m
+BLUE		=	\033[0;94m
+MAGENTA		=	\033[0;95m
+CYAN		=	\033[0;96m
+WHITE		=	\033[0;97m
 
+$(NAME): all
 
 all: libft server client server_bonus client_bonus 
 
