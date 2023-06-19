@@ -6,19 +6,19 @@
 #    By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/08 12:05:06 by julietteand       #+#    #+#              #
-#    Updated: 2023/06/19 13:00:34 by juandrie         ###   ########.fr        #
+#    Updated: 2023/06/19 14:05:08 by juandrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := libft.a
+NAME = libft.a
 
-CC := gcc
+CC = gcc
 
-CFLAGS := -Wall -Wextra -Werror -I./Libft 
+CFLAGS = -Wall -Wextra -Werror -I./Libft 
 
-LIBFT_DIR := Libft
+LIBFT_DIR = Libft
 
-HEADER := -I$(LIBFT_DIR)
+HEADER = -I$(LIBFT_DIR)
 
 $(NAME): all
 
