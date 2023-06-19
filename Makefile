@@ -6,7 +6,7 @@
 #    By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/08 12:05:06 by julietteand       #+#    #+#              #
-#    Updated: 2023/06/19 15:49:43 by juandrie         ###   ########.fr        #
+#    Updated: 2023/06/19 17:36:38 by juandrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror #-I./Libft 
+CFLAGS = -Wall -Wextra -Werror
 
 LIBFT_DIR = Libft
 
