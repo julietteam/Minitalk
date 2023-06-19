@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: julietteandrieux <julietteandrieux@stud    +#+  +:+       +#+         #
+#    By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/17 12:09:49 by juandrie          #+#    #+#              #
-#    Updated: 2023/06/12 18:12:49 by julietteand      ###   ########.fr        #
+#    Updated: 2023/06/19 12:58:19 by juandrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,9 +76,6 @@ fclean: clean
 		${RM} ${NAME}
 
 re: 
-	$(MAKE) fclean
-	$(MAKE) all
+	$(MAKE) fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+.PHONY: all clean fclean re 
