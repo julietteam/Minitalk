@@ -6,7 +6,7 @@
 #    By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/08 12:05:06 by julietteand       #+#    #+#              #
-#    Updated: 2023/06/19 17:36:38 by juandrie         ###   ########.fr        #
+#    Updated: 2023/06/19 17:51:58 by juandrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ MAGENTA		=	\033[0;95m
 CYAN		=	\033[0;96m
 WHITE		=	\033[0;97m
 
-$(NAME): libft server client server_bonus client_bonus
+$(NAME): libft server client bonus
 
 all: $(NAME)
 
@@ -44,6 +44,8 @@ client: client.o
 
 server: server.o 
 	$(CC) $(CFLAGS) server.o -L$(LIBFT_DIR) -lft -o $@
+
+bonus : libft server_bonus client_bonus
 
 server_bonus: server_bonus.o 
 	$(CC) $(CFLAGS) server_bonus.o -L$(LIBFT_DIR) -lft -o $@
