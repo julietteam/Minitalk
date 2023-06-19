@@ -6,7 +6,7 @@
 /*   By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 10:50:50 by julietteand       #+#    #+#             */
-/*   Updated: 2023/06/19 16:14:10 by juandrie         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:03:52 by juandrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int	main(void)
 	ft_printf("\033[90mWaiting for a message...\033[0m\n");
 	sig.sa_sigaction = ft_handler;
 	sigemptyset(&sig.sa_mask);
+	sig.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &sig, NULL);
 	sigaction(SIGUSR2, &sig, NULL);
 	while (1)
