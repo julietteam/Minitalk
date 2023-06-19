@@ -6,7 +6,7 @@
 #    By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/08 12:05:06 by julietteand       #+#    #+#              #
-#    Updated: 2023/06/19 14:20:59 by juandrie         ###   ########.fr        #
+#    Updated: 2023/06/19 15:49:43 by juandrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -I./Libft 
+CFLAGS = -Wall -Wextra -Werror #-I./Libft 
 
 LIBFT_DIR = Libft
 
@@ -31,24 +31,24 @@ MAGENTA		=	\033[0;95m
 CYAN		=	\033[0;96m
 WHITE		=	\033[0;97m
 
-$(NAME): all
+$(NAME): libft server client server_bonus client_bonus
 
-all: libft server client server_bonus client_bonus 
+all: $(NAME)
 
 libft:
 	$(MAKE) -C $(LIBFT_DIR)
 	@cp $(LIBFT_DIR)/libft.a .
 
-client: client.o libft.a
+client: client.o 
 	$(CC) $(CFLAGS) client.o -L$(LIBFT_DIR) -lft -o $@
 
-server: server.o libft.a
+server: server.o 
 	$(CC) $(CFLAGS) server.o -L$(LIBFT_DIR) -lft -o $@
 
-server_bonus: server_bonus.o libft.a
+server_bonus: server_bonus.o 
 	$(CC) $(CFLAGS) server_bonus.o -L$(LIBFT_DIR) -lft -o $@
 
-client_bonus: client_bonus.o libft.a
+client_bonus: client_bonus.o 
 	$(CC) $(CFLAGS) client_bonus.o -L$(LIBFT_DIR) -lft -o $@
 
 %.o: %.c

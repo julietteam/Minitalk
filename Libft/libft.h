@@ -6,7 +6,7 @@
 /*   By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 15:04:36 by juandrie          #+#    #+#             */
-/*   Updated: 2023/05/16 16:18:50 by juandrie         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:47:17 by juandrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <sys/types.h>
 
 int		ft_isalpha(int argument);
 int		ft_isdigit(int c);

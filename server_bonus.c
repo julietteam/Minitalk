@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julietteandrieux <julietteandrieux@stud    +#+  +:+       +#+        */
+/*   By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 10:50:50 by julietteand       #+#    #+#             */
-/*   Updated: 2023/06/13 09:01:13 by julietteand      ###   ########.fr       */
+/*   Updated: 2023/06/19 16:14:10 by juandrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	ft_handler(int signal, siginfo_t *info, void *context)
 	(void) context;
 	if (signal == SIGUSR1)
 		i |= (0x01 << bit);
-	else if (signal == SIGUSR2)
-		i |= (0x00 << bit);
 	bit++;
 	if (bit == 8)
 	{
@@ -50,7 +48,6 @@ int	main(void)
 	ft_printf("\033[90mWaiting for a message...\033[0m\n");
 	sig.sa_sigaction = ft_handler;
 	sigemptyset(&sig.sa_mask);
-	sig.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &sig, NULL);
 	sigaction(SIGUSR2, &sig, NULL);
 	while (1)

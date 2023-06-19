@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julietteandrieux <julietteandrieux@stud    +#+  +:+       +#+        */
+/*   By: juandrie <juandrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 13:04:42 by juandrie          #+#    #+#             */
-/*   Updated: 2023/06/09 11:57:28 by julietteand      ###   ########.fr       */
+/*   Updated: 2023/06/19 15:47:42 by juandrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdint.h>
+# include <sys/types.h>
 # include "libft.h"
 
 int		ft_hexa(unsigned int n, const char c);
